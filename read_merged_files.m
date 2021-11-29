@@ -46,6 +46,9 @@ bbp = bbp_giop(:,2).*(532/443).^-eta;
 ocb(j,1) = nanmedian(bbp);
 lidarb(j,1) = nanmedian(lidar1deg(:,3)).*0.5; % phase function diff
 lid8(j,1) =  datenum(datetime(yr, mo,1));
+clear bbp_giop eta
 end
+
+save('/data1/bisson/lidar/MELD/ts_bbp.mat','ocb','lidarb','lid8')
 
 
